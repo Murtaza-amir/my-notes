@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fff;
+    background-image: url('../images/login-bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+a,a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+}
+
+.login .input {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.login .input input {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.login button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    color: #fff;
+    background-color: #191719;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.login p a {
+    font-weight: 500;
+}
+
+.btn-spin {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    display: none;
+    animation: spin 0.7s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

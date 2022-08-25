@@ -1,0 +1,21 @@
+RewriteEngine on
+
+# For Removing .php From all Files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# *************
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^crud/note-type/([0-9a-zA-Z_-]+) crud/note-type.php?action=$1 [NC,L]
+
+# **************
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^crud/notes/([0-9a-zA-Z_-]+) crud/notes.php?action=$1 [NC,L]
+
+# **************
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^crud/login-signup/([0-9a-zA-Z_-]+) crud/login-signup.php?action=$1 [NC,L]
