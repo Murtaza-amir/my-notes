@@ -347,9 +347,10 @@ function getNotes() {
                         $("#editNote .popup-box").css({ 'background': data.color });
                         $("#editNote").addClass('show');
 
+                        
                         $("#editNote .type-colors .type-color").each((i, element) => {
                             if (element.querySelector('input').value == data.type_id) {
-                                element.querySelector('input').setAttribute("checked", 'checked');
+                                element.querySelector('input').click();
                             }
                         });
 
@@ -436,7 +437,8 @@ function noteTypeColors() {
         type: "GET",
         success: function (data) {
 
-            if (data.status == true) {
+            if (data) {
+                $("#editNote .type-colors").empty();
                 data.forEach((element) => {
                     $("#editNote .type-colors").append(`
                         <label class="type-color">
