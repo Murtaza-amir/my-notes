@@ -11,6 +11,10 @@ body {
     background-color: #fff;
 }
 
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+
 a,a:hover {
     text-decoration: none;
     color: inherit;
@@ -51,7 +55,7 @@ header {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(238, 238, 238, 0.445);
-    z-index: 8;
+    z-index: 1;
 }
 
 .user-info {
@@ -64,9 +68,13 @@ header {
     display: block;
     text-align: center;
     line-height: 30px;
+    /* justify-content: center;
+    align-items: center; */
+    /* line-height: 0; */
     width: 35px;
     height: 35px;
     border: 1px solid #eee;
+    /* background-color: #eeee; */
     border-radius: 100%;
 }
 .user-info .info-img img {
@@ -744,6 +752,19 @@ header {
     .section-container {
         padding: 0 20px;
     }
+
+    #noteCards .note-placeholder {
+        margin: 0;
+    }
+
+    #noteCards .note-placeholder::before {
+        display: none;
+    }
+
+    .note-card-actions .actions-drop-link {
+        opacity: 1;
+    }
+    
 }
 
 /* Media Query end */

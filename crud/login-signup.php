@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: *');
 header("Access-Control-Allow-Headers: X-Requested-With");
 
-$conn = mysqli_connect("localhost", "root", "", "notes") or die("Connection Error!");
+include './db.php';
 
 $ACTION = $_GET['action'];
 
